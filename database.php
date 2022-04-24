@@ -48,10 +48,23 @@
                 $author_firstName = htmlspecialchars($_POST["author_firstname"]);
                 $genre = htmlspecialchars($_POST["genre"]);
                 $bookId = intval($_POST["book_id"]);
-            if($connection != null) {
-                $results = mysqli_query($connection, "INSERT INTO stock (book_id, book_name, author_lastname, author_firstname, genre) VALUES('{$bookId}', '{$bookName}', '{$author_lastName}', '{$author_firstName}', '{$genre}')");
+                if($connection != null) {
+                    $results = mysqli_query($connection, "INSERT INTO stock (book_id, book_name, author_lastname, author_firstname, genre) VALUES('{$bookId}', '{$bookName}', '{$author_lastName}', '{$author_firstName}', '{$genre}')");
             }
         }
+    }
+
+    function deleteBook() {
+        global $connection;
+        if (isset($_POST["book_id"]) &&
+            isset($_POST["book_name"])) {
+                $book_id = intval($_POST["book_id"]);
+                $book_name = htmlspecialchars($_POST["book_name"]);
+                if($connection != null) {
+                    $delete = "DELETE FROM stock WHERE book_name = '{$book_name}'";
+                    mysqli_query($connection, $delete);
+                }
+            }
     }
 
     function close() {

@@ -1,2 +1,3 @@
 # DIG3134CPortfolio2
-This portfolio builds off of lab 7 with a database created to hold information about books. The table shows which books are already in the database with a form above for the user to add in their own books to the collection.
+This portfolio builds off of lab 7 with a database created to hold information about books.
+Index.php shows a table of the current books in stock along with a form above. This allows users to add a book to the current stock by entering all important information about the book. At the bottom of this is a link to direct the user to Delete.php. This allows the user to delete a book from their stock list if they no longer have this book. All the user has to do is insert the book id and book name, submit, then refresh their table or database.

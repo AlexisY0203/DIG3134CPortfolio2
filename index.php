@@ -27,5 +27,6 @@
         booksTable();
         addBook();
         close();
+        echo("<a href='delete.php'>Search for a Book</a><br>");
     ?>
 </html>
