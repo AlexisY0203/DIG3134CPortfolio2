@@ -1,1 +1,2 @@
 # DIG3134CPortfolio2
+This portfolio builds off of lab 7 with a database created to hold information about books. The table shows which books are already in the database with a form above for the user to add in their own books to the collection.
